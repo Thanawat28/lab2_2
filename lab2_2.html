@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <fieldset>
+        <form action="travel.php" method="post">
+            <h1>แบบฟอร์มการจองทัวร์</h1>
+            <fieldset>
+                <legend>ข้อมูลทั่วไป</legend>
+                ชื่อ-นามสกุล :<br>
+                <input type="name" name="name" placeholder="กรอกชื่อ-นามสกุล">*<br>
+                Email :<br>
+                <input type="email" id="email" name="email" value="">*<br>
+                โทรศัพท์ :<br>
+                <input type="text" id="phone number" name="phone number" value="+66">*<br>
+                ที่อยู่ :<br>
+                <textarea cols="50" rows="5" placeholder></textarea><br>
+                รหัสไปรษณีย์ :
+                <input type="text" name="number" placeholder size="5" pattern="[0-9]{5}"><br>
+                รูปผู้จอง :
+                <input type="file" placeholder>
+            </fieldset>
+
+            <fieldset>
+                <legend>ข้อมูลเข้าสู่ระบบ</legend>
+                Username:<br>
+                <input type="text" name="uname" placeholder pattern="\w{8,}"><br>
+                <i>ประกอบด้วยตัวเลข ตัวอักษร หรือ_ตั้งแต่ 8 ตัวขึ้นไป</i><br><br>
+                Password:<br>
+                <input type="text" name="password" placeholder pattern="\S{8,}"><br>
+                <i>ประกอบด้วยอักขระอะไรก็ได้ 8 ตัวขึ้นไป</i>
+            </fieldset>
+
+            <fieldset>
+                <legend>ข้อมูลทัวร์ที่ต้องการ</legend>
+                <label>แพคเก็จทัวร์:</label>
+                <select name="travel" id="traval">
+                    <option value="">--select--</option>
+                    <option value="ไทย">ไทย</option>
+                    <option value="เกาหลี">เกาหลี</option>
+                    <option value="จีน">จีน</option>
+                    <option value="ฝรั่งเศษ">ฝรั่งเศษ</option>
+                    <option value="อังกฤษ">อังกฤษ</option>
+                </select><br>
+                วันที่เดินทาง:
+                <input type="date" name="date" placeholder><br>
+                จำนวนผู้เดินทาง:
+                <input type="number" name="num" placeholder min="1" max="""><br>
+                <label>เน้นการท่องเที่ยวแบบใด?<br>
+                    <input type="checkbox" checked>ชอปปิ้ง<br>
+                    <input type="checkbox" >ธรรมชาติ<br>
+                    <input type="checkbox" >ทะเล<br>
+                </label>
+            </fieldset>
+
+            <label>ยอมรับเงื่อนไขและข้อตกลง
+                <input type="radio" name="agree" value="I agree" checked>I agree
+                <input type="radio" name="agree" value="I disaree">I disaree
+                <input type="submit" value="จอง">
+            </label>
+
+
+        </form>
+    </fieldset>
+</body>
+
+</html>
